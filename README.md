@@ -1,4 +1,4 @@
-# Real Estate Application
+# IP Searcher Application
 
 
 ## How to install it and use it:
