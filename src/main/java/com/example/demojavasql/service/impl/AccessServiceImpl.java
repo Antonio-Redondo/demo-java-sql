@@ -58,8 +58,7 @@ public class AccessServiceImpl extends BaseJPAServiceImpl<Access, Long> implemen
             accessDTO.setMessage("The repeated ip for this range of time does not reach the minimum threshold");
 
         }
-                return accessDTO;
-
+        return accessDTO;
     }
 
     private String[] calculateDates(String startDate, String time, long duration) throws ParseException{
