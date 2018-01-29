@@ -1,0 +1,32 @@
+.access-container {
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+.center{
+  float: left;
+  position: relative;
+  left: 40%;
+}
+
+.right{
+  float: right;
+  position: relative;
+ 
+}
+.mat-button-toggle{
+  color: grey;
+}
+.grey{
+  color: grey;
+}
+
+.custom-card {
+  background-color: #FAE1DC;
+}
+
+
+
+
+

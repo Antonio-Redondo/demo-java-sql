@@ -1,0 +1,46 @@
+
+<div class="access-container">
+    <mat-card>
+  
+  <label class="grey">Date</label>
+  <br>
+  <angular2-date-picker (click)="checkFields()" placeholder="Start Date" [(ngModel)]="startDate"
+  [settings]="settings"></angular2-date-picker>
+  <br>
+  <br>
+  <br>
+  <br>
+  <mat-button-toggle (click)="open()">Time</mat-button-toggle>
+  <input [(ngModel)]="selectedInputTime" (click)="checkFields()"  type="time" value="{{selectedTime}}" (click)="refresh()" (keyup)="refresh()">
+    <br>
+    <br>
+    <br>
+    <br>
+        <mat-form-field>
+            <mat-select placeholder="Duration" [(ngModel)]="access.duration" [required]="true"
+             (ngModelChange)="selectedValueDuration($event)" (click)="checkFields()" >
+              <mat-option *ngFor="let duration of durations" [value]="duration.value">
+                  {{ duration.viewValue }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+  <br>
+  <br>
+  <br>
+  <br>
+      <mat-form-field>
+        <mat-select placeholder="Threshold" [(ngModel)]="access.threshold" [required]="true" 
+        (ngModelChange)="selectedValueThreshold($event)" (click)="checkFields()" [disabled]="!enableButtonThreshold">
+          <mat-option *ngFor="let threshold of thresholds" [value]="threshold.value">
+              {{ threshold.viewValue }}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <mat-button-toggle [disabled]="!enableButton" style="padding-left:50px;display:block" (click)="seacrhAccess()" >Search</mat-button-toggle>
+</mat-card>
+</div>
