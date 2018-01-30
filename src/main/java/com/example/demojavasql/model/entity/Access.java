@@ -1,6 +1,9 @@
 package com.example.demojavasql.model.entity;
 
 import com.example.demojavasql.data.JPAEntity;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -11,6 +14,9 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "ACCESS")
+@Getter
+@Setter
+@ToString
 public class Access extends  JPAEntity<Long>implements Serializable {
 
     private static final long serialVersionUID = -6470090944414208496L;
@@ -30,36 +36,4 @@ public class Access extends  JPAEntity<Long>implements Serializable {
     private String ip;
 
 
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public long getAccessId() {
-        return accessId;
-    }
-
-    public void setAccessId(long accessId) {
-        this.accessId = accessId;
-    }
-
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
-    public long getRepetitions() {
-        return repetitions;
-    }
-
-    public void setRepetitions(long repetitions) {
-        this.repetitions = repetitions;
-    }
 }
